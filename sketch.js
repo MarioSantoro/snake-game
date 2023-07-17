@@ -48,6 +48,8 @@ function Snake() {
     this.yspeed = 0;
     this.total = 0;
     this.tail = [];
+    this.scorePoint = 0;
+    let score = document.getElementById('score');
 
     this.dir = function (x, y) {
         this.xspeed = x;
@@ -81,6 +83,8 @@ function Snake() {
         let d = dist(this.x, this.y, pos.x, pos.y);
         if (d < 1) {
             this.total++;
+            this.scorePoint++;
+            score.innerHTML = `Score : ${this.scorePoint}`;
             return true;
         } else {
             return false;
