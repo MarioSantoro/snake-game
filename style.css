@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 html,
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -14,4 +17,42 @@ body {
 
 canvas {
   display: block;
+}
+
+.menu {
+  background-color: #283446;
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  font-weight: 500;
+  padding: 20px 27px;
+  color: #B8C6DC;
+  font-size: 1.2rem;
+}
+
+#play {
+  background-color: #B8C6DC;
+
+}
+
+#play:hover {
+  color: white;
+}
+
+div.gameover {
+  display: none;
+  position: absolute;
+  font-size: 6rem;
+}
+
+div.gameover.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
 }
